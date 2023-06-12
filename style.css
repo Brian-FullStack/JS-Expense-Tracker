@@ -28,6 +28,7 @@ hr {
     margin-top: 10px;
 }
 
+/* START Balance Section*/
 
 #yourBalance,
 #balance {
@@ -59,3 +60,45 @@ hr {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+/* END Balance Section*/
+
+/* START History Section*/
+
+.activeIndicatorRed {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: red;
+    margin: 2em 0;
+}
+
+.activeIndicatorGreen {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: green;
+    margin: 2em 0;
+}
+
+.item {
+    border-radius: 8px;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 3em 1em 1em;
+    background-color: #fff;
+    width: 95%;
+}
+
+.itemName {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.itemPrice {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+/* END History Section*/
