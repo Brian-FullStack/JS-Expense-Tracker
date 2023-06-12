@@ -65,6 +65,13 @@ hr {
 
 /* START History Section*/
 
+.activeIndicator {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 2em 0;
+}
+
 .activeIndicatorRed {
     border: 1px solid black;
     border-radius: 8px;
