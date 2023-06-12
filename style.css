@@ -9,3 +9,53 @@
     /*light = 300
     semibold = 600*/
 }
+
+main {
+    max-width: 60vw;
+    padding: 2em;
+}
+
+#title {
+    font-size: 52px;
+    font-weight: 600;
+}
+
+hr {
+    color: #939393;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+
+#yourBalance,
+#balance {
+    font-size: 32px;
+}
+
+#balance {
+    font-weight: 600;
+}
+
+#balanceSheet {
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 70%;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.col-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#income,
+#expense {
+    font-size: 28px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

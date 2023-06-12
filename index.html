@@ -11,17 +11,22 @@
 
 <body>
     <main>
-        <h1 id="title">Expense Tracker</h1>
-        <hr>
-        <section id="balanceSection">
-            <span>Your balance: €</span> <span id="balance">100.00</span>
 
-            <div id="balanceSheet">
-                <div>
+        <section id="balanceSection">
+            <h1 id="title">Expense Tracker</h1>
+            <hr class="mt-1">
+
+            <div class="mt-1" id="yourBalance">
+                <span>Your balance: €</span> <span id="balance">100.00</span>
+            </div>
+
+            <div id="balanceSheet" class="mt-1">
+                <div class="col-flex">
                     <span>Income</span>
                     <span id="income">€200.00</span>
                 </div>
-                <div>
+                <hr>
+                <div class="col-flex">
                     <span>Expense</span>
                     <span id="expense">€89.00</span>
                 </div>
@@ -31,7 +36,7 @@
 
         <section id="historySection">
             <h2 class="subTitle">History</h2>
-            <hr>
+            <hr class="mt-1">
             <div id="transactionHistory">
                 <div class="item">
                     <span class="itemName">Course</span>
@@ -50,7 +55,7 @@
 
         <section id="newTransaction">
             <h2 class="subTitle">Add new transaction</h2>
-            <hr>
+            <hr class="mt-1">
             <form action="#">
                 <label for="name">Description</label>
                 <input type="text" name="name" id="name" placeholder="Name">
