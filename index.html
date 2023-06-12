@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1 id="title">Expense Tracker</h1>
+        <hr>
+        <section id="balanceSection">
+            <span>Your balance: €</span> <span id="balance">100.00</span>
+
+            <div id="balanceSheet">
+                <div>
+                    <span>Income</span>
+                    <span id="income">€200.00</span>
+                </div>
+                <div>
+                    <span>Expense</span>
+                    <span id="expense">€89.00</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="historySection">
+            <h2 class="subTitle">History</h2>
+            <hr>
+            <div id="transactionHistory">
+                <div class="item">
+                    <span class="itemName">Course</span>
+                    <span class="itemPrice">-100.00</span>
+                </div>
+                <div class="item">
+                    <span class="itemName">Income</span>
+                    <span class="itemPrice">+40.00</span>
+                </div>
+                <div class="item">
+                    <span class="itemName">Expense</span>
+                    <span class="itemPrice">-70.00</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="newTransaction">
+            <h2 class="subTitle">Add new transaction</h2>
+            <hr>
+            <form action="#">
+                <label for="name">Description</label>
+                <input type="text" name="name" id="name" placeholder="Name">
+
+                <label for="amount">Amount</label>
+                <input type="text" name="amount" id="amount" placeholder="0.00">
+            </form>
+            <button type="submit" id="addBtn">Add Transaction</button>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
