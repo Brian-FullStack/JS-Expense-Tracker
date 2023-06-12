@@ -81,7 +81,7 @@ hr {
 
 .item {
     border-radius: 8px;
-    border-right: none;
+    border-right: 2px solid black;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     display: flex;
