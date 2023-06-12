@@ -102,3 +102,28 @@ hr {
 }
 
 /* END History Section*/
+
+/* START Add Transaction Section */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+input {
+    padding: .5em;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+
+#addBtn {
+    padding: .5em 1.5em;
+    font-size: 18px;
+    background-color: #2953e9;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* END Add Transaction Section */
