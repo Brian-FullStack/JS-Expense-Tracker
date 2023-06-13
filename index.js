@@ -1,15 +1,42 @@
 const addBtn = document.querySelector("#addBtn");
-let activeIndicator = document.querySelector(".activeIndicator");
+const activeIndicator = document.querySelector(".activeIndicator");
 const transactionArray = [];
 
 
 
-const addTransactionToHistory = (transaction) => {
-    /**Use the .unshift() method to add new transaction to transaction array
-     * if activeIndicator == true set activeIndicator.classList to green
-     * use the .pop() method to remove the last transaction if the transactionArray.length > 5
+const addTransactionToHistory = (transactionArray) => {
+    /**for each object in the transactionArray:
+     * create a new item and display:
+     * 1. Name
+     * 2. Price
+     * 3. Red / Green
      */
 
+    const itemContainer = document.querySelector(".item-container");
+    itemContainer.innerHTML = ""; // CLears the previous transaction history
+
+    transactionArray.forEach((transaction) => {
+        const activeIndicator = document.createElement("div");
+        activeIndicator.classList.add("activeIndicator");
+
+        // Creates the red or green mark at end of line
+        if (transaction.amount >= 0) {
+            activeIndicator.classList.remove("activeIndicator");
+            activeIndicator.classList.add("activeIndicatorGreen");
+        } else {
+            activeIndicator.classList.remove("activeIndicator");
+            activeIndicator.classList.add("activeIndicatorRed");
+        }
+
+        const item = document.createElement("div");
+        item.classList.add("item");
+        item.innerHTML = `
+            <span class="itemName">${transaction.name}</span>
+            <span class="itemPrice">${transaction.amount}</span>`
+
+            activeIndicator.appendChild(item);
+            itemContainer.appendChild(activeIndicator);
+    });
 }
 
 const updateBalanceSheet = (income, expense, balance) => {
@@ -29,13 +56,6 @@ const createNewTransaction = () => {
     let name = document.querySelector("#name").value;
     let amount = document.querySelector("#amount").value;
     let asset = false;
-    
-    if (amount >= 0) {
-        activeIndicator.classList.add("activeIndicatorGreen");
-        asset = true
-    } else {
-        activeIndicator.classList.add("activeIndicatorRed");
-    }
 
     let newTransaction = {
         name: name.toLowerCase(),
@@ -43,7 +63,12 @@ const createNewTransaction = () => {
         asset: asset
     };
 
-    console.log(newTransaction)
+    transactionArray.unshift(newTransaction)
+    addTransactionToHistory(transactionArray)
+    /* transactionArray.shift() */
+
+    name = "";
+    amount = "";
 }
 
 /**Clcik event for add button */
